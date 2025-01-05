@@ -1,5 +1,6 @@
-#!/bin/bash
+/* */
 
+#!/bin/bash
 # Directories
 ONEDRIVE_REMOTE="onedrive-skole-sin:/"  # Replace with your existing remote name
 LOCAL_DIR=~/school-files                # Your Linux directory for school files
