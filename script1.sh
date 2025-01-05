@@ -14,9 +14,24 @@ for i in 1 2 3 4 5;do
   read name
   echo "hello, $name! Welcome to bash scripting"
 
-  greet() {
-    echo "Hello, $1!"
-  }
 
-  greet "Alice"
-  greet "Bob"
+
+
+ echo "Enter a number"
+ read number
+ if [ $number -gt 10 ]; then
+   echo "The number is great than 10"
+   elif [ $number -lt 10 ]; then
+     echo "The number is less than 10"
+     elif [ $number -eq 10 ]; then
+     echo "The number is equal to 10"
+     else
+     echo "invaild innput"
+     fi
+
+     count=1
+     while [ $count -le 5 ]; do
+       echo "Count: $count"
+       count=$((count + 1))
+     done
+
