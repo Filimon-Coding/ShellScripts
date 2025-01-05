@@ -6,7 +6,7 @@ LOCAL_DIR=~/school-files                # Your Linux directory for school files
 
 # Sync from Linux to OneDrive
 echo "Syncing from Linux folder to OneDrive..."
-rclone sync "$LOCAL_DIR" "$ONEDRIVE_REMOTE" \
+# rclone sync "$LOCAL_DIR" "$ONEDRIVE_REMOTE" \
     --progress \
     --max-age 1m \
     --size-only \
