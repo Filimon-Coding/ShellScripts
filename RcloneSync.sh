@@ -3,7 +3,14 @@
 # Function to sync from OneDrive to local directory
 sync_from_onedrive() {
     echo "Starting synchronization from OneDrive to local folder..."
-    rclone sync onedrive-skole-sin:/ ~/local-folder --progress
+    rclone sync onedrive-skole-sin:/ ~/local-folder \
+        --progress \
+        --create-empty-src-dirs \
+        --include "**" \
+        --exclude "Thumbs.db" \
+        --exclude "desktop.ini" \
+        --exclude ".DS_Store"
+
     if [ $? -eq 0 ]; then
         echo "Synchronization from OneDrive to local folder completed successfully."
     else
@@ -14,7 +21,14 @@ sync_from_onedrive() {
 # Function to sync from local directory to OneDrive
 sync_to_onedrive() {
     echo "Starting synchronization from local folder to OneDrive..."
-    rclone sync ~/local-folder onedrive-skole-sin:/ --progress
+    rclone sync ~/local-folder onedrive-skole-sin:/ \
+        --progress \
+        --create-empty-src-dirs \
+        --include "**" \
+        --exclude "Thumbs.db" \
+        --exclude "desktop.ini" \
+        --exclude ".DS_Store"
+
     if [ $? -eq 0 ]; then
         echo "Synchronization from local folder to OneDrive completed successfully."
     else
