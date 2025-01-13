@@ -5,7 +5,7 @@
 # Function to open Firefox with multiple tabs
 open_firefox() {
     echo "Opening Firefox with school-related tabs..."
-    firefox https://oslomet.instructure.com/ https://chat.openai.com/ https://github.com/Filimon-Coding/ https://hioa365-my.sharepoint.com 2>/dev/null &
+    firefox https://oslomet.instructure.com/ https://chat.openai.com/ https://github.com/Filimon-Coding/ https://hioa365-my.sharepoint.com/my?id=%2Fpersonal%2Ffikal5351%5Foslomet%5Fno%2FDocuments%2FDokumenter%2FOsloMetITHele 2>/dev/null &
 }
 
 # Function to open IntelliJ IDEA
