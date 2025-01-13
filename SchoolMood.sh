@@ -17,7 +17,7 @@ open_intellij() {
 # Function to open the file explorer in a specific folder
 open_file_explorer() {
     echo "Opening File Explorer at /home/neo/local-folder/Dokumenter..."
-    nautilus /home/neo/local-folder/Dokumenter 2>/dev/null &
+    nautilus /home 2>/dev/null &
 }
 
 # Main function to call the above setup
