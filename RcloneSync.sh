@@ -3,7 +3,7 @@
 # Function to sync from OneDrive to local directory
 sync_from_onedrive() {
     echo "Starting synchronization from OneDrive to local folder..."
-    rclone sync onedrive-skole-sin:/ ~/local-folder \
+      rclone sync onedrive-skole-sin:/ /media/neov/New\ Volume/OnedriveEverything/local-folder \
         --progress \
         --create-empty-src-dirs \
         --include "**" \
