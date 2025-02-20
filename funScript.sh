@@ -2,8 +2,7 @@
 
 # Array of jokes
 
-  echo "--------------------------------------------------"
-  echo "--------------------------------------------------"
+
 jokes=(
     "Why don't scientists trust atoms? Because they make up everything!"
     "What do you call fake spaghetti? An impasta."
@@ -37,7 +36,7 @@ show_joke() {
 while true; do
   echo "--------------------------------------------------"
   echo "--------------------------------------------------"
-  echo "Enter '1' for a new joke or any other key to exit:"
+  echo "Hit 1 || Anykey -> Exit:"
   read input
 
   if [[ "$input" == "1" ]]; then
