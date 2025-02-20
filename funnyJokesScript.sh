@@ -22,12 +22,26 @@ field!"
         guess the two of us aren’t going to work out."
         "Why was the math book sad? Because it had too many problems."
 )
+# Function to display a random joke
+show_joke() {
+  # Generate a random index
+  random_index=$(( RANDOM % ${#jokes[@]} ))
 
-# Get the number of jokes
-num_jokes=${#jokes[@]}
+  # Print the selected joke
+  echo "${jokes[$random_index]}"
+}
 
-# Generate a random index
-random_index=$(( RANDOM % num_jokes ))
+while true; do
+  echo "--------------------------------------------------"
+  echo "--------------------------------------------------"
+  echo "Enter '1' for a new joke or any other key to exit:"
+  read input
 
-# Print the selected joke
-echo "${jokes[$random_index]}"
+  if [[ "$input" == "1" ]]; then
+    show_joke
+  else
+    echo "Goodbye!"
+    break
+  fi
+done
+
