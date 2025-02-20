@@ -17,6 +17,10 @@ field!"
        numbers? He will stop at nothing to avoid them!"
        "I used to play piano by ear, but now I use my hands."
        "Why don't skeletons fight each other? They don't have the guts."
+       "What do you call fake spaghetti? An impasta."
+       "I asked my date to meet me at the gym, but she never showed up. I
+        guess the two of us aren’t going to work out."
+        "Why was the math book sad? Because it had too many problems."
 )
 
 # Get the number of jokes
