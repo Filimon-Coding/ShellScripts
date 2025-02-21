@@ -1,8 +1,6 @@
 #!/bin/bash
 
 # Array of jokes
-
-
 jokes=(
     "Why don't scientists trust atoms? Because they make up everything!"
     "What do you call fake spaghetti? An impasta."
