@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FOLDER_PATH="/media/neov/New Volume/OnedriveEverything/local-folder/Dokumenter/OsloMetITHele"
+FOLDER_PATH="/media/neov/NewDisk/OnedriveEverything/local-folder/Dokumenter/OsloMetITHele"
 
 if [ -d "$FOLDER_PATH" ]; then
     xdg-open "$FOLDER_PATH" &  # Opens the folder in the default file manager
