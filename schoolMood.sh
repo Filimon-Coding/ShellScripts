@@ -16,7 +16,7 @@ open_intellij() {
 
 # Function to open the file explorer in a specific folder
 open_file_explorer() {
-    echo "Opening File Explorer at /home/neo/local-folder/Dokumenter..."
+    echo "Opening File Explorer at /home/neov/ Min  SKole Mappe Struktur..."
     xdg-open "/media/neov/NewDisk/OnedriveEverything/local-folder/Dokumenter/OsloMetITHele"
 
 }
