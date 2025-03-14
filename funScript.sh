@@ -21,6 +21,8 @@ field!"
        "I asked my date to meet me at the gym, but she never showed up. I
         guess the two of us aren’t going to work out."
         "Why was the math book sad? Because it had too many problems."
+        "Son : I am hungry
+        Father : Hello, Hungry, i am dad "
 )
 # Function to display a random joke
 show_joke() {
@@ -34,7 +36,7 @@ show_joke() {
 while true; do
   echo "--------------------------------------------------"
   echo "--------------------------------------------------"
-  echo "Hit 1 || Anykey -> Exit:"
+  echo "Hit 1 to hear a joke  || Anykey -> Exit:"
   read input
 
   if [[ "$input" == "1" ]]; then
