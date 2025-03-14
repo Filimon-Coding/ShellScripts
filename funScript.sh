@@ -21,8 +21,9 @@ field!"
        "I asked my date to meet me at the gym, but she never showed up. I
         guess the two of us aren’t going to work out."
         "Why was the math book sad? Because it had too many problems."
-        "Son : I am hungry
-        Father : Hello, Hungry, i am dad "
+        "Son says: I am hungry
+        Father says: Hello, Hungry, i am dad "
+
 )
 # Function to display a random joke
 show_joke() {
