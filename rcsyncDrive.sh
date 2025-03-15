@@ -4,16 +4,17 @@
 sync_from_onedrive() {
     echo "Starting synchronization from OneDrive to local folder..."
       rclone sync onedrive-skole-sin:/ /media/neov/NewDisk/OnedriveEverything/local-folder \
-        --progress \
-        --create-empty-src-dirs \
-        --include "**" \
-        --exclude "Thumbs.db" \
-        --exclude "desktop.ini" \
-        --exclude ".DS_Store"
-        --checksum \
-        --modify-window 2s
-        --no-update-modtime
-        --ignore-errors
+    --progress \
+    --create-empty-src-dirs \
+    --update \
+    --checksum \
+    --modify-window 2s \
+    --no-update-modtime \
+    --onedrive-chunk-size 10M \
+    --filter "- Thumbs.db" \
+    --filter "- desktop.ini" \
+    --filter "- .DS_Store" \
+    --ignore-errors
 
 
     if [ $? -eq 0 ]; then
