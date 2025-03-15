@@ -10,6 +10,11 @@ sync_from_onedrive() {
         --exclude "Thumbs.db" \
         --exclude "desktop.ini" \
         --exclude ".DS_Store"
+        --checksum \
+        --modify-window 2s
+        --no-update-modtime
+        --ignore-errors
+
 
     if [ $? -eq 0 ]; then
         echo "Synchronization from OneDrive to local folder completed successfully."
