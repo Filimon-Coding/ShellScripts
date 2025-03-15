@@ -7,7 +7,7 @@ sync_from_onedrive() {
     --progress \
     --create-empty-src-dirs \
     --update \
-    --checksum \
+    --size-only \
     --modify-window 2s \
     --no-update-modtime \
     --onedrive-chunk-size 10M \
@@ -70,3 +70,6 @@ main_menu() {
 
 # Run the main menu
 main_menu
+
+notify-send "OneDrive Sync" "Sync completed successfully!"
+
