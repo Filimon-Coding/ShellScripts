@@ -14,3 +14,12 @@ c=$(($b - $a))
 
 d=$(date -d@$c -u +%H:%M:%S)
 echo "$d"
+
+# Opp 19
+a=$(date -d $1 +%s)
+b=$(date -d $2 +%s)
+
+c=$(($b - $a))
+
+d=$(date -d@$c -u +%H:%M:%S)
+echo "$d"
