@@ -36,3 +36,26 @@ COPY index.html /var/www/html
 
 CMD ["apachectl", "-D", "FOREGROUND"]
 
+
+# Eksam2019 H
+#! /bin/bash
+
+cd /home/group144/eksam2019H
+rm -r -d adir bdir cdir
+rm -r -f afil2 bfil1 bom bom2 cfil1 cfil2 col container
+touch afil2 bfil1 bom bom2 cfil1 cfil2 col container
+for i in {a..c}
+do
+mkdir $i"dir"
+done
+
+afil=$(find . -type f -name "a*")
+mv $afil /home/group144/eksam2019H/adir
+
+bfil=$(find . -type f -name "b*")
+mv $bfil /home/group144/eksam2019H/bdir
+
+cfil=$(find . -type f -name "c*")
+mv $cfil /home/group144/eksam2019H/cdir
+
+
