@@ -99,3 +99,47 @@ MENU
     *) echo "Invalid choice";;
   esac
 done
+
+
+
+######### For for få utregning fra prosent to rpm kjører man et loop
+
+
+#neov@matrixv:~$ for p in 10 12 15 18 20 22 25 28 30 32 35 38; do
+#  nbfc set -s "$p"
+#  sleep 2
+#  printf "%s -> " "$p"
+#  nbfc status | awk -F':' '/Current Fan Speed/{gsub(/^[ \t]+/,"",$2); print $2"%"}' | head -n1
+#done
+#nbfc set --auto
+#10 -> 6.25%
+#12 -> 6.25%
+#15 -> 15.62%
+#18 -> 9.38%
+#20 -> 9.38%
+#22 -> 9.38%
+#25 -> 12.50%
+#28 -> 12.50%
+#30 -> 15.62%
+#32 -> 15.62%
+#35 -> 15.62%
+#38 -> 18.75%
+#neov@matrixv:~$ for p in 40 42 44 46 48 50 52 54 56 58 60 62; do
+#  nbfc set -s "$p"; sleep 2
+#  printf "%2s%% -> " "$p"
+#  nbfc status | awk -F':' '/Current Fan Speed/{gsub(/^[ \t]+/,"",$2); print $2"%"; exit}'
+#done
+#nbfc set --auto
+#40% -> 25.00%
+#42% -> 21.88%
+#44% -> 21.88%
+#46% -> 25.00%
+#48% -> 25.00%
+#50% -> 28.12%
+#52% -> 28.12%
+#54% -> 28.12%
+#56% -> 31.25%
+#58% -> 31.25%
+#60% -> 31.25%
+#62% -> 34.38%
+#neov@matrixv:~$
