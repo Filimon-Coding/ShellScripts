@@ -143,3 +143,15 @@ done
 #60% -> 31.25%
 #62% -> 34.38%
 #neov@matrixv:~$
+
+############# For gjør endriing på profilene på min egen pc (Skal være noe ligende for andre også (defualt fra repo)
+
+#neov@matrixv:~$
+#(Perfekt spot for noe : Fan1 56 56 and Fan2 15 15  Faulty fan 2 (maybe)
+
+#root@matrixv:/home/neov# cd /usr/share/nbfc/configs/
+#root@matrixv:/usr/share/nbfc/configs#
+
+#nano "HP Victus 16-e0xxx Balanced.json"
+#sudo nbfc config --set "HP Victus 16-e0xxx Balanced"
+#sudo nbfc restart
