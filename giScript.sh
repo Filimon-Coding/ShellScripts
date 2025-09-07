@@ -2,10 +2,14 @@
 
 messages=(
     "Oppdatering fra forrige"
+    "ok"
+    "yes"
+    "k"
+    "sist"
     "Sjekk mot git repo"
     "Sist oppdatering før avslutting av dagen"
     "Bugfix og justering"
-    "Endring basert fra nettleser/items"
+    "Endring basert fra "
     "Oppdatert"
     "Forbedret"
     "opp før endring"
