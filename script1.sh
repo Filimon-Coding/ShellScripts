@@ -6,6 +6,9 @@ echo "Today’s date is: $(date)"
 echo "Today is nice day"
 echo " Yeyy funker nå "
 
+
+
+
 for i in 1 2 3 4 5;do
   echo "Number : $i"
   done
