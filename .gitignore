@@ -1,6 +1,9 @@
 # Default ignored files
+.gitignore
 /shelf/
 /.idea/workspace.xml
+giScript.sh
+gitScript.sh
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
@@ -8,4 +11,3 @@
 /dataSources.local.xml
 
 
-giScript.sh
