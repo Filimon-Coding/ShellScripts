@@ -8,6 +8,8 @@ then
 else
     echo "Filen ble ikke funnet: $FILE"
 fi
+##
+##
 
 #!/bin/bash
 # ============================================
