@@ -5,6 +5,10 @@ set -euo pipefail
 SILENT='HP Victus 16-e0xxx Silent'
 BALANCED='HP Victus 16-e0xxx Balanced'
 STOCK='HP Victus 16-e0xxx'
+SMOOTH='HP Victus 16-e0xxx Smooth'
+PERFORMANCE='HP Victus 16-e0xxx Performance'
+SMOOTH_D2='HP Victus 16-e0xxx Smooth Disabled2'
+PERFORMANCE_D2='HP Victus 16-e0xxx Performance Disabled2'
 
 need() { command -v "$1" >/dev/null 2>&1 || { echo "Missing: $1"; exit 1; }; }
 need nbfc
@@ -71,32 +75,40 @@ while true; do
   echo "====== Fan Controller (nbfc) ======"
   show_current_mode
   cat <<MENU
-1) Fan status (single snapshot)
-2) Switch to STOCK
-3) Switch to SILENT
-4) Switch to BALANCED
-5) BLAST (100% manual)
-6) QUIET30 (30% manual)
-7) Back to AUTO (use profile)
-8) Enable nbfc on boot
-9) Disable nbfc on boot
-11) Fan status LIVE (updates every second)
-0) Quit
+1)  Fan status (single snapshot)
+2)  Switch to STOCK
+3)  Switch to SILENT
+4)  Switch to BALANCED
+5)  Switch to SMOOTH           (anti-hunt, 20% min, Fan2 active)
+6)  Switch to PERFORMANCE      (aggressive, 30% min, Fan2 active)
+7)  Switch to SMOOTH-D2        (anti-hunt, Fan2 DISABLED)
+8)  Switch to PERFORMANCE-D2   (aggressive, Fan2 DISABLED)
+9)  BLAST (100% manual)
+10) QUIET30 (30% manual)
+11) Back to AUTO (use profile)
+12) Enable nbfc on boot
+13) Disable nbfc on boot
+14) Fan status LIVE (updates every second)
+0)  Quit
 MENU
   read -rp "Choose: " c
   case "${c:-}" in
-    1) fan_status ;;
-    2) switch_profile "$STOCK" ;;
-    3) switch_profile "$SILENT" ;;
-    4) switch_profile "$BALANCED" ;;
-    5) switch_manual_speed 100 ;;
-    6) switch_manual_speed 30 ;;
-    7) manual_auto ;;
-    8) enable_boot ;;
-    9) disable_boot ;;
-    11) fan_status_live ;;
-    0) echo "Bye!"; exit 0 ;;
-    *) echo "Invalid choice";;
+    1)  fan_status ;;
+    2)  switch_profile "$STOCK" ;;
+    3)  switch_profile "$SILENT" ;;
+    4)  switch_profile "$BALANCED" ;;
+    5)  switch_profile "$SMOOTH" ;;
+    6)  switch_profile "$PERFORMANCE" ;;
+    7)  switch_profile "$SMOOTH_D2" ;;
+    8)  switch_profile "$PERFORMANCE_D2" ;;
+    9)  switch_manual_speed 100 ;;
+    10) switch_manual_speed 30 ;;
+    11) manual_auto ;;
+    12) enable_boot ;;
+    13) disable_boot ;;
+    14) fan_status_live ;;
+    0)  echo "Bye!"; exit 0 ;;
+    *)  echo "Invalid choice";;
   esac
 done
 
